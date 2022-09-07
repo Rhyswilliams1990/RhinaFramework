@@ -53,7 +53,7 @@ public class CapabilityLoader
             if (PropertiesLoader.getProperties().getProperty(browserNameEnv).toLowerCase().equals("chrome")) {
                 ChromeOptions options = new ChromeOptions();
 
-                options.addArguments(new String[]{"--start-maximized", "disable-gpu", "--headless", "--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080"});
+                options.addArguments(new String[]{"--start-maximized", "disable-gpu", "--ignore-ssl-errors","--ignore-certificate-errors", "--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080"});
 
                 WebDriver driver = new ChromeDriver(options);
 
